@@ -28,6 +28,6 @@ create table bookings(
   user_id int references users(user_id),
   match_id int references matches(match_id),
   seat_number varchar(50),
-  payment_status varchar(50) check (payment_status in('Pending','Confirmed','Cancelled','Refunded')) not null,
+  payment_status varchar(50) check (payment_status in('Pending','Confirmed','Cancelled','Refunded')),
   total_cost numeric(10,2) not null
 )
